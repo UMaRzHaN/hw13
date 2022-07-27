@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    background-color: aqua;
+}
+.text{
+    position: absolute;
+    top: 50px;
+
+    color: blueviolet;
+    font-size: 100px;
+}
+.road{
+    width: 1023px;
+    height: 558px;
+
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../img/beskonechnaya-doroga-v-nebo-i-zakat.jpg);
+
+    position: relative;
+    border: 5px solid greenyellow;
+}
+.kolobok{
+    height: 100px;
+    width: 100px;
+
+    background-image: url(../img/kolobok.png);
+    background-size: 100%;
+
+    border-radius: 50%;
+    bottom: 0px;
+
+    position: absolute;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    animation: kolobok 5s linear infinite;
+}
+.wall-box{
+    height: 100px;
+    width: 100px;
+
+
+
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+.wall{
+    background-color: rgb(255, 0, 0);
+    width: 100px;
+    height: 20px;
+
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translatex(-50%);
+    animation: wall 5s linear infinite;
+}
+@keyframes wall{
+
+ 30%{
+        left: 10%;
+        transform: scalex(3) scaleY(2) translatex(-1%);
+        bottom: 50px;
+
+    }
+    60%{
+        left: 10%;
+        transform: scalex(6) scaleY(4) translatex(-1%);
+        bottom: -10px;
+    }
+    90%{
+        left: 10%;
+        transform: scalex(11) scaleY(8) translatex(-1%);
+        bottom: -150px;
+    }
+    100%{
+        background-color: rgba(255, 0, 0, 0);
+    }
+}
+@keyframes kolobok {
+    30%{
+        bottom: 100px;
+    }
+    100%{
+    }
+}
